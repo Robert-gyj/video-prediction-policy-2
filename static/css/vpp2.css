@@ -189,7 +189,7 @@ footer a { color: #775295; }
 
 /* Four stacked comparisons per row, with shared labels on the left. */
 .distillation-grid { display: grid; gap: 24px; }
-.distillation-row { display: grid; grid-template-columns: 115px repeat(4, minmax(0, 1fr)); gap: 0; align-items: stretch; }
+.distillation-row { display: grid; grid-template-columns: 115px repeat(4, minmax(0, 1fr)); column-gap: 12px; row-gap: 0; align-items: stretch; }
 .distillation-row-labels { display: grid; grid-template-rows: repeat(2, minmax(0, 1fr)); padding-right: 10px; font-size: .8rem; line-height: 1.35; }
 .distillation-row-labels span { display: flex; align-items: center; }
 .distillation-row-labels .after-label { color: #008b78; font-weight: 600; }
