@@ -187,38 +187,17 @@ footer a { color: #775295; }
 .performance-tabs, .open-environment, .instruction-comparison, .policy-performance-content { width: calc(90% - 43.2px); max-width: 1080px; }
 @media (max-width: 768px) { .performance-tabs, .open-environment, .instruction-comparison, .policy-performance-content { width: calc(90% - 21.6px); } }
 
-.distillation-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 18px; }
-.distillation-example { min-width: 0; }
-.distillation-example h4 { font-size: .9rem; font-weight: 600; margin: 0 0 .75rem; color: #626262; }
-.distillation-result { margin: 0 0 .85rem; }
-.distillation-result figcaption { font-size: .85rem; margin-bottom: .35rem; color: #363636; }
-.distillation-video { display: block; width: 100%; height: auto; aspect-ratio: 416 / 240; border-radius: 7px; background: #f5f5f5; }
-@media (max-width: 900px) { .distillation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; } }
-@media (max-width: 480px) { .distillation-grid { grid-template-columns: 1fr; } }
-
-/* Three comparisons per row, before/after side by side. */
-.distillation-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 20px; }
-.distillation-example { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; align-items: start; }
-.distillation-result { margin: 0; min-width: 0; }
-.distillation-result figcaption { font-size: .78rem; white-space: nowrap; }
-.distillation-video { box-sizing: border-box; border: 2px solid transparent; }
-.after-distillation .distillation-video { border-color: #5f9c88; }
-.after-distillation figcaption { color: #467969; font-weight: 600; }
-@media (max-width: 900px) { .distillation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 600px) { .distillation-grid { grid-template-columns: 1fr; } }
-
-/* Compact single-line distillation labels. */
-.distillation-result figcaption { white-space: nowrap; font-size: .75rem; line-height: 1.2; margin: 0 0 4px; }
-.distillation-example { column-gap: 8px; }
-
-/* Label only the first row; draw the accent directly against the video edge. */
-.distillation-example:nth-child(n+4) .distillation-result figcaption { display: none; }
-.distillation-video { border: 0; }
-.after-distillation .distillation-video { border: 0; box-shadow: 0 0 0 2px #5f9c88; }
-@media (min-width: 601px) and (max-width: 900px) { .distillation-example:nth-child(n+3) .distillation-result figcaption { display: none; } }
-@media (max-width: 600px) { .distillation-example:nth-child(n+2) .distillation-result figcaption { display: none; } }
-
-.after-distillation .distillation-video { box-shadow: 0 0 0 3px #397f69; }
+/* Four stacked comparisons per row, with shared labels on the left. */
+.distillation-grid { display: grid; gap: 24px; }
+.distillation-row { display: grid; grid-template-columns: 115px repeat(4, minmax(0, 1fr)); gap: 0; align-items: stretch; }
+.distillation-row-labels { display: grid; grid-template-rows: repeat(2, minmax(0, 1fr)); padding-right: 10px; font-size: .8rem; line-height: 1.35; }
+.distillation-row-labels span { display: flex; align-items: center; }
+.distillation-row-labels .after-label { color: #008b78; font-weight: 600; }
+.distillation-example { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto; gap: 0; min-width: 0; }
+.distillation-result { position: relative; min-width: 0; margin: 0; padding: 0; }
+.distillation-video { display: block; width: 100%; height: auto; aspect-ratio: 416 / 240; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: #f5f5f5; }
+.after-distillation::after { content: ""; position: absolute; inset: 0; border: 3px solid #20bfa9; pointer-events: none; }
+@media (max-width: 768px) { .distillation-grid { overflow-x: auto; } .distillation-row { min-width: 820px; grid-template-columns: 100px repeat(4, minmax(0, 1fr)); } }
 
 .policy-results-figure { display: block; width: 100%; height: auto; margin: 0; }
 #zero-shot-aloha { min-height: 0; padding-bottom: 3rem; }
