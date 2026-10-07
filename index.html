@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Video Prediction Policy 2: Predict Better, Act Better">
+  <meta property="og:title" content="Video Prediction Policy 2: Predict Better, Act Better">
+  <meta property="og:type" content="website">
+  <title>Video Prediction Policy 2: Predict Better, Act Better</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/vpp2.css">
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-fullhd">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-2 publication-title"><span class="papertitle">Video Prediction Policy 2: Predict Better, Act Better</span></h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Yanjiang Guo<sup>1,2,*</sup>,</span>
+                <span class="author-block">Haodong Yan<sup>1,3,*</sup>,</span>
+                <span class="author-block">Zhide Zhong<sup>1,3,*</sup>,</span>
+                <span class="author-block">Zhongru Zhang<sup>2,*</sup>,</span>
+                <span class="author-block">Qingyuan Yang<sup>1,2,*</sup>,</span>
+                <br class="author-line-break">
+                <span class="author-block">Qingzhou Lu<sup>1,2</sup>,</span>
+                <span class="author-block">Xiaoyu Chen<sup>1</sup>,</span>
+                <span class="author-block">Yen-Jen Wang<sup>4</sup>,</span>
+                <span class="author-block">Shuying Deng<sup>1,2,4</sup>,</span>
+                <span class="author-block">Chenghan Yang<sup>2</sup>,</span>
+                <span class="author-block">Puzhen Yuan<sup>1,2</sup>,</span>
+                <br class="author-line-break">
+                <span class="author-block">Chenxin Liu<sup>1,2</sup>,</span>
+                <span class="author-block">Tun Ban<sup>1,5</sup>,</span>
+                <span class="author-block">Xiang Zhu<sup>1,2</sup>,</span>
+                <span class="author-block">Yichen Liu<sup>1,2</sup>,</span>
+                <span class="author-block">Kun Feng<sup>1,2</sup>,</span>
+                <span class="author-block">Haoang Li<sup>3</sup>,</span>
+                <span class="author-block">Jianyu Chen<sup>1,2</sup></span>
+              </div>
+              <div class="affiliation author-affiliations">
+                <div class="affiliation-row">
+                  <span class="contribution-note"><sup>*</sup>Equal Contribution</span>
+                  <span><sup>1</sup>Robotera</span>
+                  <span><sup>2</sup>Tsinghua University</span>
+                  <span><sup>3</sup>HKUST (GZ)</span>
+                </div>
+                <div class="affiliation-row">
+                  <span><sup>4</sup>University of California, Berkeley</span>
+                  <span><sup>5</sup>Shanghai Jiaotong University</span>
+                </div>
+              </div>
+              <div class="institution-logos" aria-label="Affiliated institutions">
+                <a class="institution-logo logo-robotera" href="https://www.robotera.com/" target="_blank" rel="noopener noreferrer" title="Robotera"><img src="media/images/logos/robotera.jpg" alt="Robotera"></a>
+                <a class="institution-logo logo-tsinghua" href="https://www.tsinghua.edu.cn/" target="_blank" rel="noopener noreferrer" title="Tsinghua University"><img src="media/images/logos/tsinghua.png" alt="Tsinghua University"></a>
+                <a class="institution-logo logo-hkust" href="https://www.hkust-gz.edu.cn/" target="_blank" rel="noopener noreferrer" title="HKUST (GZ)"><img src="media/images/logos/gkg.png" alt="HKUST (GZ)"></a>
+                <a class="institution-logo logo-berkeley" href="https://www.berkeley.edu/" target="_blank" rel="noopener noreferrer" title="University of California, Berkeley"><img src="media/images/logos/berkeley.png" alt="University of California, Berkeley"></a>
+                <a class="institution-logo logo-sjtu" href="https://www.sjtu.edu.cn/" target="_blank" rel="noopener noreferrer" title="Shanghai Jiao Tong University"><img src="media/images/logos/sjtu.png" alt="Shanghai Jiao Tong University"></a>
+              </div>
+              <div class="button-container" aria-label="Paper resources">
+                <a class="button project-page-button" href="https://sites.google.com/view/video-prediction-policy-2" target="_blank" rel="noopener noreferrer">Project Page</a>
+                <!-- Replace these buttons with links when the URLs are available. -->
+                <button class="button" disabled title="Paper link coming soon">Paper</button>
+                <button class="button" disabled title="Code link coming soon">Code</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-wrapper overview-section" aria-label="Overview">
+      <div class="overview-figures">
+        <img class="overview-image" src="media/images/overview-fig1.png" alt="Overview of Video Prediction Policy 2 (VPP2)">
+        <img class="overview-image" src="media/images/overview-fig4-3.png" alt="VPP2 training architecture: video pretraining, post-training and distillation, and action training">
+      </div>
+      <div class="overview-description">
+        <p>We introduce Video Prediction Policy 2 (VPP2), a WAM that enables <strong>strong zero-shot generalization in both video prediction and action generation.</strong></p>
+        <p class="pipeline-label">The whole pipeline:</p>
+        <p>(1) First, we curate a large-scale, diverse dataset of manipulation videos to continue pretraining the base video foundation model. We annotate video clips with detailed captions and perform <em>event-level</em> video pretraining to promote generalization across open-ended manipulation tasks.</p>
+        <p>(2) Second, we post-train and distill the video model into a single-step visual planner with fixed prediction horizon.</p>
+        <p>(3) Finally, we introduce action module via a mixture-of-transformers (MoT) architecture to learn implicit inverse dynamics model.</p>
+      </div>
+    </section>
+
+    <div class="performance-tabs" role="tablist" aria-label="Performance results">
+      <button type="button" class="performance-tab" id="video-performance-tab" role="tab" aria-selected="true" aria-controls="video-performance-panel" tabindex="0">Video Prediction Model: Predict Better</button>
+      <button type="button" class="performance-tab" id="policy-performance-tab" role="tab" aria-selected="false" aria-controls="policy-performance-panel" tabindex="-1">Policy Model: Act Better</button>
+    </div>
+    <div id="video-performance-panel" class="performance-panel" role="tabpanel" aria-labelledby="video-performance-tab" tabindex="0">
+    <section class="open-environment paper-section" id="open-environment">
+      <div class="module-header">
+        <h2 class="title is-3">Open-World Manipulation Video Prediction</h2>
+      </div>
+      <p class="comparison-intro">Video predictions of human-hand and robot-arm manipulation in open environments.</p>
+
+      <div class="module-header subgroup-header">
+        <h3 class="open-environment-heading">Human-hand manipulation</h3>
+        <div class="comparison-toolbar"><button type="button" id="replay-open-environment">Replay all</button><button type="button" id="pause-open-environment">Pause all</button></div>
+      </div>
+      <div class="open-environment-scroll"><div class="open-environment-grid">
+        <figure class="open-environment-example" data-example="fig6-001">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Human-hand manipulation prediction 001"><source src="media/videos/open-environment/fig6/001.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Approach the AirPod in front of the bottle.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig6-004">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Human-hand manipulation prediction 004"><source src="media/videos/open-environment/fig6/004.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Place the leftmost bottle in front of the cup.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig6-013">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Human-hand manipulation prediction 013"><source src="media/videos/open-environment/fig6/013.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Use the scissors to cut the paper.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig6-018">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Human-hand manipulation prediction 018"><source src="media/videos/open-environment/fig6/018.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Close the screen of the MacBook.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig6-025">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Human-hand manipulation prediction 025"><source src="media/videos/open-environment/fig6/025.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Grasp a tissue and wipe the screen.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig6-028">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Human-hand manipulation prediction 028"><source src="media/videos/open-environment/fig6/028.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Place the spoon on the iPad.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig6-034">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Human-hand manipulation prediction 034"><source src="media/videos/open-environment/fig6/034.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Pull out the gas nozzle.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig6-035">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Human-hand manipulation prediction 035"><source src="media/videos/open-environment/fig6/035.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Open the oven.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig6-036">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Human-hand manipulation prediction 036"><source src="media/videos/open-environment/fig6/036.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Remove the lid and place it on the table.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig6-047">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Human-hand manipulation prediction 047"><source src="media/videos/open-environment/fig6/047.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Pick up the left slipper and place it on the right side.</figcaption>
+        </figure>
+      </div></div>
+      <div class="module-header subgroup-header">
+        <h3 class="open-environment-heading">Robot-arm manipulation</h3>
+        <div class="comparison-toolbar"><button type="button" id="replay-robot-arm">Replay all</button><button type="button" id="pause-robot-arm">Pause all</button></div>
+      </div>
+      <div class="open-environment-scroll"><div class="open-environment-grid">
+        <figure class="open-environment-example" data-example="fig7-002">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Robot-arm manipulation prediction 002"><source src="media/videos/open-environment/fig7/002.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Grasp the sponge and clean the whiteboard.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig7-004">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Robot-arm manipulation prediction 004"><source src="media/videos/open-environment/fig7/004.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Place the electronic device into the box.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig7-005">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Robot-arm manipulation prediction 005"><source src="media/videos/open-environment/fig7/005.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Place the green block on the controller.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig7-007">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Robot-arm manipulation prediction 007"><source src="media/videos/open-environment/fig7/007.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Pour water into the blue bowl.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig7-024">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Robot-arm manipulation prediction 024"><source src="media/videos/open-environment/fig7/024.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Fold the towel from right to left.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig7-031">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Robot-arm manipulation prediction 031"><source src="media/videos/open-environment/fig7/031.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Place the lid back on the bottle.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig7-044">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Robot-arm manipulation prediction 044"><source src="media/videos/open-environment/fig7/044.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Open the upper drawer.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig7-081">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Robot-arm manipulation prediction 081"><source src="media/videos/open-environment/fig7/081.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Sweep the block into the dustbin.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig7-090">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Robot-arm manipulation prediction 090"><source src="media/videos/open-environment/fig7/090.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Grasp the blue towel and wipe the plate.</figcaption>
+        </figure>
+        <figure class="open-environment-example" data-example="fig7-113">
+          <video class="open-environment-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Robot-arm manipulation prediction 113"><source src="media/videos/open-environment/fig7/113.mp4" type="video/mp4"></video>
+          <figcaption class="open-environment-instruction" aria-label="Instruction">Flip the package.</figcaption>
+        </figure>
+      </div></div>
+    </section>
+
+    <section class="instruction-comparison paper-section" id="instruction-comparison">
+      <div class="module-header">
+        <h2 class="title is-3">Faithful Instruction Following</h2>
+      </div>
+      <p class="comparison-intro">Video predictions from Wan2.1-I2V-14B, Cosmos3-Super-64B, and VPP2 given the same initial frame and different instructions.</p>
+
+      <div class="module-header subgroup-header">
+        <h3 class="open-environment-heading">Model comparison</h3>
+        <div class="comparison-toolbar"><button type="button" id="replay-comparisons">Replay all</button><button type="button" id="pause-comparisons">Pause all</button></div>
+      </div>
+      <div class="comparison-scroll"><div class="instruction-grid equal-size-grid" style="--rows: 3" aria-label="fig5 model comparison">
+        <div class="comparison-heading">Initial frame</div><div class="branch-heading" aria-hidden="true"></div><div class="comparison-heading">Instruction</div><div class="comparison-heading">Wan2.1-I2V-14B</div><div class="comparison-heading">Cosmos3-Super-64B</div><div class="comparison-heading vpp2-heading">VPP2 (Ours)</div>
+        <figure class="shared-initial"><img src="media/images/fig5-initial.jpg" width="416" height="240" alt="Shared initial frame for fig5"><figcaption>Same initial frame</figcaption></figure>
+        <div class="instruction-branches" aria-hidden="true"><svg viewBox="0 0 54 300" preserveAspectRatio="none"><defs><marker id="arrow-fig5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#000000" /></marker></defs><g fill="none" stroke="#000000" stroke-width="1.8" vector-effect="non-scaling-stroke"><path d="M 0 150 H 12 Q 20 150 20 142 V 58 Q 20 50 28 50 H 46" marker-end="url(#arrow-fig5)" /><path d="M 0 150 H 12 Q 20 150 20 150 V 150 Q 20 150 28 150 H 46" marker-end="url(#arrow-fig5)" /><path d="M 0 150 H 12 Q 20 150 20 158 V 242 Q 20 250 28 250 H 46" marker-end="url(#arrow-fig5)" /></g></svg></div>
+        <div class="comparison-instruction" data-example="003"><span>Place the <strong class="instruction-keyword">second bottle from the left</strong> <strong class="instruction-keyword">in front of</strong> the <strong class="instruction-keyword">leftmost bottle</strong>.</span></div>
+        <div class="prediction-cell wan-cell"><video class="comparison-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Wan2.1-I2V-14B prediction for instruction 003"><source src="media/videos/instruction-comparison/003-wan.mp4" type="video/mp4"></video></div>
+        <div class="prediction-cell cosmos-cell"><video class="comparison-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Cosmos3-Super-64B prediction for instruction 003"><source src="media/videos/instruction-comparison/003-cosmos.mp4" type="video/mp4"></video></div>
+        <div class="prediction-cell vpp2-cell"><video class="comparison-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="VPP2 prediction for instruction 003"><source src="media/videos/instruction-comparison/003-vpp2.mp4" type="video/mp4"></video></div>
+        <div class="comparison-instruction" data-example="004"><span>Place the <strong class="instruction-keyword">leftmost bottle</strong> <strong class="instruction-keyword">in front of</strong> the cup.</span></div>
+        <div class="prediction-cell wan-cell"><video class="comparison-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Wan2.1-I2V-14B prediction for instruction 004"><source src="media/videos/instruction-comparison/004-wan.mp4" type="video/mp4"></video></div>
+        <div class="prediction-cell cosmos-cell"><video class="comparison-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Cosmos3-Super-64B prediction for instruction 004"><source src="media/videos/instruction-comparison/004-cosmos.mp4" type="video/mp4"></video></div>
+        <div class="prediction-cell vpp2-cell"><video class="comparison-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="VPP2 prediction for instruction 004"><source src="media/videos/instruction-comparison/004-vpp2.mp4" type="video/mp4"></video></div>
+        <div class="comparison-instruction" data-example="005"><span>Place the cup <strong class="instruction-keyword">in front of</strong> the <strong class="instruction-keyword">leftmost cup</strong>.</span></div>
+        <div class="prediction-cell wan-cell"><video class="comparison-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Wan2.1-I2V-14B prediction for instruction 005"><source src="media/videos/instruction-comparison/005-wan.mp4" type="video/mp4"></video></div>
+        <div class="prediction-cell cosmos-cell"><video class="comparison-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="Cosmos3-Super-64B prediction for instruction 005"><source src="media/videos/instruction-comparison/005-cosmos.mp4" type="video/mp4"></video></div>
+        <div class="prediction-cell vpp2-cell"><video class="comparison-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="VPP2 prediction for instruction 005"><source src="media/videos/instruction-comparison/005-vpp2.mp4" type="video/mp4"></video></div>
+      </div></div>
+      <div class="comparison-scroll"><div class="instruction-grid" style="--rows: 2" aria-label="fig5-2 model comparison">
+        <div class="comparison-heading">Initial frame</div><div class="branch-heading" aria-hidden="true"></div><div class="comparison-heading">Instruction</div><div class="comparison-heading">Wan2.1-I2V-14B</div><div class="comparison-heading">Cosmos3-Super-64B</div><div class="comparison-heading vpp2-heading">VPP2 (Ours)</div>
+        <figure class="shared-initial"><img src="media/images/fig5-2-initial.jpg" alt="Shared initial frame for fig5-2"><figcaption>Same initial frame</figcaption></figure>
+        <div class="instruction-branches" aria-hidden="true"><svg viewBox="0 0 54 300" preserveAspectRatio="none"><defs><marker id="arrow-fig5-2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#000000" /></marker></defs><g fill="none" stroke="#000000" stroke-width="1.8" vector-effect="non-scaling-stroke"><path d="M 0 150 H 12 Q 20 150 20 142 V 83 Q 20 75 28 75 H 46" marker-end="url(#arrow-fig5-2)" /><path d="M 0 150 H 12 Q 20 150 20 158 V 217 Q 20 225 28 225 H 46" marker-end="url(#arrow-fig5-2)" /></g></svg></div>
+        <div class="comparison-instruction" data-example="067"><span>Stack the red paper cup <strong class="instruction-keyword">on</strong> the <strong class="instruction-keyword">leftmost black cup</strong>.</span></div>
+        <div class="prediction-cell wan-cell"><video class="comparison-video" width="320" height="240" autoplay loop muted playsinline preload="auto" aria-label="Wan2.1-I2V-14B prediction for instruction 067"><source src="media/videos/instruction-comparison/067-wan.mp4" type="video/mp4"></video></div>
+        <div class="prediction-cell cosmos-cell"><video class="comparison-video" width="320" height="240" autoplay loop muted playsinline preload="auto" aria-label="Cosmos3-Super-64B prediction for instruction 067"><source src="media/videos/instruction-comparison/067-cosmos.mp4" type="video/mp4"></video></div>
+        <div class="prediction-cell vpp2-cell"><video class="comparison-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="VPP2 prediction for instruction 067"><source src="media/videos/instruction-comparison/067-vpp2.mp4" type="video/mp4"></video></div>
+        <div class="comparison-instruction" data-example="068"><span>Stack the red paper cup <strong class="instruction-keyword">on</strong> the <strong class="instruction-keyword">second black cup from the left</strong>.</span></div>
+        <div class="prediction-cell wan-cell"><video class="comparison-video" width="320" height="240" autoplay loop muted playsinline preload="auto" aria-label="Wan2.1-I2V-14B prediction for instruction 068"><source src="media/videos/instruction-comparison/068-wan.mp4?v=2" type="video/mp4"></video></div>
+        <div class="prediction-cell cosmos-cell"><video class="comparison-video" width="320" height="240" autoplay loop muted playsinline preload="auto" aria-label="Cosmos3-Super-64B prediction for instruction 068"><source src="media/videos/instruction-comparison/068-cosmos.mp4" type="video/mp4"></video></div>
+        <div class="prediction-cell vpp2-cell"><video class="comparison-video" width="416" height="240" autoplay loop muted playsinline preload="auto" aria-label="VPP2 prediction for instruction 068"><source src="media/videos/instruction-comparison/068-vpp2.mp4" type="video/mp4"></video></div>
+      </div></div>
+    </section>
+    </div>
+    <div id="policy-performance-panel" class="performance-panel" role="tabpanel" aria-labelledby="policy-performance-tab" tabindex="0" hidden>
+      <section class="policy-performance-content paper-section" id="distillation-comparison">
+        <div class="module-header"><h2 class="title is-3">One-Step Video Generation for Fast Inference</h2></div>
+        <div class="module-header subgroup-header">
+          <h3 class="open-environment-heading">Before and After Distillation</h3>
+          <div class="comparison-toolbar"><button type="button" id="replay-distillation">Replay all</button><button type="button" id="pause-distillation">Pause all</button></div>
+        </div>
+        <div class="distillation-grid">
+          <article class="distillation-example" aria-label="Distillation comparison">
+            <figure class="distillation-result">
+              <figcaption>Before Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="Before Distillation"><source src="media/videos/distillation/before/002.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+            <figure class="distillation-result after-distillation">
+              <figcaption>After Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="After Distillation"><source src="media/videos/distillation/after/002.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+          </article>
+          <article class="distillation-example" aria-label="Distillation comparison">
+            <figure class="distillation-result">
+              <figcaption>Before Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="Before Distillation"><source src="media/videos/distillation/before/005.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+            <figure class="distillation-result after-distillation">
+              <figcaption>After Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="After Distillation"><source src="media/videos/distillation/after/005.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+          </article>
+          <article class="distillation-example" aria-label="Distillation comparison">
+            <figure class="distillation-result">
+              <figcaption>Before Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="Before Distillation"><source src="media/videos/distillation/before/035.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+            <figure class="distillation-result after-distillation">
+              <figcaption>After Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="After Distillation"><source src="media/videos/distillation/after/035.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+          </article>
+          <article class="distillation-example" aria-label="Distillation comparison">
+            <figure class="distillation-result">
+              <figcaption>Before Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="Before Distillation"><source src="media/videos/distillation/before/042.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+            <figure class="distillation-result after-distillation">
+              <figcaption>After Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="After Distillation"><source src="media/videos/distillation/after/042.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+          </article>
+          <article class="distillation-example" aria-label="Distillation comparison">
+            <figure class="distillation-result">
+              <figcaption>Before Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="Before Distillation"><source src="media/videos/distillation/before/039.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+            <figure class="distillation-result after-distillation">
+              <figcaption>After Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="After Distillation"><source src="media/videos/distillation/after/039.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+          </article>
+          <article class="distillation-example" aria-label="Distillation comparison">
+            <figure class="distillation-result">
+              <figcaption>Before Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="Before Distillation"><source src="media/videos/distillation/before/088.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+            <figure class="distillation-result after-distillation">
+              <figcaption>After Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="After Distillation"><source src="media/videos/distillation/after/088.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+          </article>
+          <article class="distillation-example" aria-label="Distillation comparison">
+            <figure class="distillation-result">
+              <figcaption>Before Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="Before Distillation"><source src="media/videos/distillation/before/107.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+            <figure class="distillation-result after-distillation">
+              <figcaption>After Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="After Distillation"><source src="media/videos/distillation/after/107.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+          </article>
+          <article class="distillation-example" aria-label="Distillation comparison">
+            <figure class="distillation-result">
+              <figcaption>Before Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="Before Distillation"><source src="media/videos/distillation/before/115.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+            <figure class="distillation-result after-distillation">
+              <figcaption>After Distillation</figcaption>
+              <video class="distillation-video" width="416" height="240" muted playsinline preload="auto" aria-label="After Distillation"><source src="media/videos/distillation/after/115.mp4?v=4s" type="video/mp4"></video>
+            </figure>
+          </article>
+        </div>
+      </section>
+      <section class="policy-performance-content paper-section" id="zero-shot-aloha">
+        <div class="module-header"><h2 class="title is-3">Zero-Shot Real-World ALOHA</h2></div>
+        <img class="policy-results-figure" src="media/images/zero-shot-aloha.png" alt="Zero-shot real-world ALOHA success rates across ten manipulation tasks and their average">
+      </section>
+    </div>
+
+
+
+
+  </main>
+  <script src="static/js/comparison.js" defer></script>
+  <script src="static/js/distillation.js" defer></script>
+  <script src="static/js/performance-tabs.js" defer></script>
+</body>
+</html>
