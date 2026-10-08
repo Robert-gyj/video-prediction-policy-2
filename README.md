@@ -1,6 +1,6 @@
 # Video Prediction Policy 2
 
-[Paper (arXiv:2610.10270)](https://arxiv.org/abs/2610.10270) · [Official code](https://github.com/roboterax/video-prediction-policy-2) · [Project page](https://robert-gyj.github.io/video-prediction-policy-2/) · [BibTeX](CITATION.bib)
+[Paper (arXiv:2610.10270)](https://arxiv.org/abs/2610.10270) · [Official code](https://github.com/roboterax/video-prediction-policy-2) · [Project page](https://robert-gyj.github.io/video-prediction-policy-2/) · [Hugging Face](https://huggingface.co/Haodong082399/VPP2) · [BibTeX](CITATION.bib)
 
 Static paper website. Open index.html or serve this folder to preview.
 
