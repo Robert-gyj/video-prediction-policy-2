@@ -1,5 +1,7 @@
 # Video Prediction Policy 2
 
+[Paper (arXiv:2610.10270)](https://arxiv.org/abs/2610.10270) · [Official code](https://github.com/roboterax/video-prediction-policy-2) · [Project page](https://robert-gyj.github.io/video-prediction-policy-2/) · [BibTeX](CITATION.bib)
+
 Static paper website. Open index.html or serve this folder to preview.
 
 Upload the entire vpp2.github.io folder to publish. All displayed images, videos, CSS, and JavaScript are included with relative paths. Google Fonts is optional; local system fonts are the fallback.

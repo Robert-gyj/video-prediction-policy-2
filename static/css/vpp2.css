@@ -207,3 +207,8 @@ footer a { color: #775295; }
 .instruction-comparison .instruction-grid { padding-top: 6px; padding-bottom: 6px; }
 
 .overview-description .pipeline-label { font-weight: 400; }
+
+/* Paper citation remains visible beneath either results tab. */
+.citation-section { padding-bottom: 3rem; text-align: left; }
+.citation-section p { margin-bottom: 1rem; }
+.citation-section pre { white-space: pre-wrap; overflow-wrap: anywhere; border-radius: 8px; line-height: 1.5; }
