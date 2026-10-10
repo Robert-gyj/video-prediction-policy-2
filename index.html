@@ -32,7 +32,7 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  <link rel="stylesheet" href="static/css/vpp2.css">
+  <link rel="stylesheet" href="static/css/vpp2.css?v=20261010-highlights">
 </head>
 <body>
   <main>
@@ -105,7 +105,8 @@
         <p class="pipeline-label">The whole pipeline:</p>
         <p>(1) First, we curate a large-scale, diverse dataset of manipulation videos to continue pretraining the base video foundation model. We annotate video clips with detailed captions and perform <em>event-level</em> video pretraining to promote generalization across open-ended manipulation tasks.</p>
         <p>(2) Second, we post-train and distill the video model into a single-step visual planner with fixed prediction horizon.</p>
-        <p>(3) Finally, we introduce action module via a mixture-of-transformers (MoT) architecture to learn implicit inverse dynamics model.</p>
+        <p>(3) Finally, we introduce an action module via a mixture-of-transformers (MoT) architecture to learn an implicit inverse dynamics model.</p>
+        <p class="overview-performance"><strong>Strong performance: VPP2 outperforms Cosmos3-64B by 11% on instruction-following tasks in open-ended video prediction and ranks #1 on the RoboDojo Benchmark after post-training.</strong></p>
       </div>
     </section>
 
