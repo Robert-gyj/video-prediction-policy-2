@@ -208,7 +208,8 @@ footer a { color: #775295; }
 .instruction-comparison .instruction-grid { padding-top: 6px; padding-bottom: 6px; }
 
 .overview-description .pipeline-label { font-weight: 400; }
-.overview-description .overview-performance strong { color: #775295; }
+.overview-description .overview-performance strong { color: #000; }
+.overview-description .overview-performance .performance-emphasis { color: #991b1b; }
 
 /* Paper citation remains visible beneath either results tab. */
 .citation-section { padding-bottom: 3rem; text-align: left; }
